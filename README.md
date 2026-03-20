@@ -1,25 +1,38 @@
 # 🎩 The Hat Below
 
-> Landing page do jogo **The Hat Below** — um jogo low code criado no Construct, com galeria de fotos, página de jogo e contato profissional.
+> Landing page do jogo **The Hat Below** — um jogo low code criado no Construct, com galeria de fotos, página sobre o jogo, acesso para jogar e contato profissional.
 
 ---
 
 ## 📋 Sobre o Projeto
 
-**The Hat Below** é uma landing page estática desenvolvida como vitrine para um jogo criado na engine **Construct**. O site reúne em um só lugar tudo sobre o jogo: screenshots, acesso direto para jogar e um canal de contato profissional.
+**The Hat Below** é uma landing page desenvolvida como vitrine para um jogo criado na engine **Construct**. O site reúne em um só lugar tudo sobre o jogo: a história, screenshots, acesso direto para jogar e um canal de contato.
+
+O jogo acompanha um gato que, após entrar em um esgoto radioativo em busca de seu chapéu, se depara com um grande rato sonolento que o pegou. Resgatar o chapéu parece fácil, mas as surpresas escondidas no esgoto vão botar a vida do gato em risco.
 
 ---
 
 ## 📄 Páginas
 
-| Página | Descrição |
-|--------|-----------|
-| 🏠 Home | Apresentação do jogo |
-| 🖼️ Galeria de Fotos | Screenshots e imagens do jogo |
-| 🎮 Jogar | Acesso direto ao jogo |
-| 📬 Contato Profissional | Formulário de contato e informações |
+| Página | Arquivo | Descrição |
+|--------|---------|-----------|
+| 🏠 Home | `index.html` | Apresentação do jogo |
+| 📖 Sobre | `sobre.html` | História e controles do jogo |
+| 🖼️ Galeria | `galeria.html` | Screenshots do jogo |
+| 📬 Contato | `contato.html` | Formulário de contato |
+| 🎮 Jogar | `jogar.html` | Acesso direto ao jogo |
 
-> ⚠️ **Atenção:** o formulário de contato é apenas visual — ele não envia dados para nenhum servidor no momento.
+> ⚠️ **Atenção:** o formulário de contato valida os campos (nome, e-mail e telefone), mas **não envia os dados** para nenhum servidor.
+
+---
+
+## 🕹️ Controles do Jogo
+
+| Ação | Tecla |
+|------|-------|
+| Correr | ← → (Setas) |
+| Pular | ↑ (Seta para cima) |
+| Atirar | `C` |
 
 ---
 
@@ -27,9 +40,12 @@
 
 - ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white) **HTML5**
 - ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white) **CSS3**
-- ![Construct](https://img.shields.io/badge/Construct-00BFFF?style=flat&logoColor=white) **Construct** *(engine do jogo)*
-- ![VSCode](https://img.shields.io/badge/VSCode-007ACC?style=flat&logo=visual-studio-code&logoColor=white) **Visual Studio Code**
-- 🔴 **Live Server** *(extensão do VSCode para desenvolvimento local)*
+- ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) **JavaScript** *(validação do formulário)*
+- **jQuery 1.11.3** *(interatividade)*
+- **AOS** *(animações ao rolar a página)*
+- **Font Awesome** *(ícones)*
+- ![Construct](https://img.shields.io/badge/Construct-00BFFF?style=flat&logoColor=white) **Construct** *(engine do jogo, exportado para web)*
+- ![VSCode](https://img.shields.io/badge/VSCode-007ACC?style=flat&logo=visual-studio-code&logoColor=white) **Visual Studio Code** + **Live Server**
 
 ---
 
@@ -44,10 +60,10 @@
 
 ```bash
 # 1. Clone o repositório
-git clone https://github.com/seu-usuario/Jogo_low_code.git
+git clone https://github.com/FrancescoGris/Jogo-low-code.git
 
 # 2. Acesse a pasta do projeto
-cd Jogo_low_code
+cd Jogo-low-code
 ```
 
 3. Abra a pasta no **VSCode**
@@ -60,29 +76,42 @@ cd Jogo_low_code
 ## 📁 Estrutura do Projeto
 
 ```
-Jogo_low_code/
+Jogo-low-code/
 │
-├── index.html          # Página principal
+├── index.html          # Página principal (Home)
+├── sobre.html          # Sobre o jogo e controles
 ├── galeria.html        # Galeria de fotos
-├── jogar.html          # Página do jogo
 ├── contato.html        # Formulário de contato
+├── jogar.html          # Página para jogar
+├── style.css           # Estilos globais do site
 │
-├── css/
-│   └── style.css       # Estilos globais
+├── css/                # Bibliotecas CSS externas
+│   ├── all.min.css     # Font Awesome
+│   └── aos.css         # Animações AOS
 │
-├── assets/
-│   └── imgs/           # Imagens e screenshots
+├── js/                 # Scripts externos
+│   ├── aos.js
+│   └── jquery-1.11.3.min.js
 │
-└── README.md
+├── imgs/               # Imagens do site
+│   ├── logo.png
+│   ├── thehatbelow.jpg
+│   ├── print1.PNG ... print5.PNG
+│   └── ...
+│
+└── jogo/               # Jogo exportado pelo Construct
+    ├── index.html
+    ├── data.json
+    ├── images/
+    ├── media/
+    └── scripts/
 ```
-
-> 💡 Adapte a estrutura acima conforme a organização real dos seus arquivos.
 
 ---
 
 ## ⚠️ Limitações Conhecidas
 
-- O **formulário de contato** não possui backend — os dados preenchidos não são enviados nem armazenados.
+- O **formulário de contato** valida os campos mas não envia os dados para nenhum servidor.
 - O site ainda **não está publicado** online.
 
 ---
@@ -90,17 +119,17 @@ Jogo_low_code/
 ## 🔮 Próximos Passos
 
 - [ ] Publicar o site (GitHub Pages, Netlify ou Vercel)
-- [ ] Implementar envio do formulário (ex: [Formspree](https://formspree.io/))
-- [ ] Adicionar responsividade mobile
-- [ ] Melhorar acessibilidade (atributos `alt`, semântica HTML)
+- [ ] Implementar envio real do formulário (ex: [Formspree](https://formspree.io/))
+- [ ] Melhorar responsividade mobile
 
 ---
 
 ## 👤 Autor
 
-Feito com 🎩 por **Francesco Gris**
+Desenvolvido por **Francesco Gris**
 
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=flat&logo=github&logoColor=white)](https://github.com/seu-usuario)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=flat&logo=instagram&logoColor=white)](https://www.instagram.com/fran_grisf/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/francesco-gris-053092355/)
 
 ---
 
