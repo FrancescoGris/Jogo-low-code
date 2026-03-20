@@ -2,6 +2,8 @@
 
 > Landing page do jogo **The Hat Below** — um jogo low code criado no Construct, com galeria de fotos, página sobre o jogo, acesso para jogar e contato profissional.
 
+🌐 **[Acesse o site aqui](https://francescogris.github.io/Jogo-low-code/)**
+
 ---
 
 ## 📋 Sobre o Projeto
@@ -112,13 +114,11 @@ Jogo-low-code/
 ## ⚠️ Limitações Conhecidas
 
 - O **formulário de contato** valida os campos mas não envia os dados para nenhum servidor.
-- O site ainda **não está publicado** online.
 
 ---
 
 ## 🔮 Próximos Passos
 
-- [ ] Publicar o site (GitHub Pages, Netlify ou Vercel)
 - [ ] Implementar envio real do formulário (ex: [Formspree](https://formspree.io/))
 - [ ] Melhorar responsividade mobile
 
