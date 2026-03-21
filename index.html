@@ -6,38 +6,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/all.min.css">
-    <title>The Hat Below - Home</title>
+    <title>The Hat Below</title>
+    <meta name="description" content="The Hat Below — um jogo de plataforma sobre um gato em busca do seu chapéu perdido.">
+    <link rel="icon" href="imgs/icone.png" type="image/png">
 </head>
 
 <body>
     <header>
         <div class="logo">
-            <a href="index.html">
-                <img src="imgs/logo.png" alt="Logo do site">
+            <a href="#hero">
+                <img src="imgs/logo.png" alt="Logo The Hat Below">
             </a>
         </div>
-         <nav>
-            <a href="index.html" title="Home">Home</a>
-            <a href="sobre.html" title="Sobre">Sobre</a>
-            <a href="galeria.html" title="Galeria">Galeria</a>
-            <a href="contato.html" title="Contato">Contato</a>
-            <a href="jogar.html" title="Jogar">Jogar</a>
+        <nav class="header-nav">
+            <a class="button-nav" href="#sobre">Sobre</a>
+            <a class="button-nav" href="#galeria">Galeria</a>
+            <a class="button-nav" href="#contato">Contato</a>
+            <a class="button-nav" href="jogar.html">Jogar</a>
         </nav>
     </header>
 
+    <main>
+        <section id="hero">
+            <h1 class="radioativo">The Hat Below</h1>
+            <p class="tagline">Um gato. Um chapéu perdido. Um esgoto radioativo.</p>
+            <a href="jogar.html" class="botao-jogar">Jogar agora</a>
+        </section>
 
-    <footer>       
+        <section id="sobre">
+            <h2 class="titulo-secao">Desventuras</h2>
+            <p>Após entrar em um esgoto radioativo na busca de seu chapéu, um gato se depara
+                com um grande rato sonolento que o pegou. Resgatá-lo parece fácil, mas as surpresas
+                escondidas no esgoto vão botar a vida do gato em risco.</p>
+
+            <div class="controles">
+                <h3>Controles</h3>
+                <div class="controles-grid">
+                    <div class="controle-item">
+                        <img src="imgs/sobrecontroles1.png" alt="Teclas de seta para correr e pular">
+                        <p>Correr e pular com as setas</p>
+                    </div>
+                    <div class="controle-item">
+                        <img src="imgs/sobrecontroles2.png" alt="Tecla C para atirar">
+                        <p>Aperte C para atirar</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeria">
+            <h2 class="titulo-secao">Galeria</h2>
+            <div class="galeria-grid">
+                <img src="imgs/print1.PNG" alt="Screenshot do jogo - fase 1">
+                <img src="imgs/print2.PNG" alt="Screenshot do jogo - fase 2">
+                <img src="imgs/print3.PNG" alt="Screenshot do jogo - fase 3">
+                <img src="imgs/print4.PNG" alt="Screenshot do jogo - fase 4">
+                <img src="imgs/print5.PNG" alt="Screenshot do jogo - fase 5">
+            </div>
+        </section>
+
+        <section id="contato">
+            <h2 class="titulo-secao">Contato</h2>
+            <form id="form">
+                <input type="text" id="nome" placeholder="Seu nome">
+                <input type="email" id="email" placeholder="Seu e-mail">
+                <input type="tel" id="telefone" placeholder="Seu telefone">
+                <button type="button" id="botao">Enviar</button>
+            </form>
+        </section>
+
+
+
+    </main>
+
+    <footer>
+        <img src="imgs/logo.png" alt="Logo The Hat Below">
         <p>Desenvolvido por Francesco Gris</p>
-        <p>
-            <img src="imgs/logo.png">
-        </p>
-        <section class="fost">
-            <p>
-                <a class="linkfoot" href="https://www.instagram.com/fran_grisf/">Instagram</a>
-                <a class="linkfoot" href="https://www.linkedin.com/in/francesco-gris-053092355/">Linkedin</a>
-            </p>
-        </section>  
+        <nav class="footer-nav">
+            <a href="https://www.instagram.com/fran_grisf/" target="_blank">Instagram</a>
+            <a href="https://www.linkedin.com/in/francesco-gris-053092355/" target="_blank">LinkedIn</a>
+        </nav>
     </footer>
-    
+
 </body>
+
 </html>
