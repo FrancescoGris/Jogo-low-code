@@ -13,19 +13,23 @@
 
 <body>
     <header>
-        <div class="logo">
-            <a href="#hero">
-                <img src="imgs/logo.png" alt="Logo The Hat Below">
-            </a>
-        </div>
-        <nav class="header-nav">
-            <a class="button-nav" href="#hero">Home</a>
-            <a class="button-nav" href="#sobre">Sobre</a>
-            <a class="button-nav" href="#galeria">Galeria</a>
-            <a class="button-nav" href="#contato">Contato</a>
-            <a class="button-nav" href="jogar.html">Jogar</a>
-        </nav>
-    </header>
+    <div class="logo">
+        <a href="#hero">
+            <img src="imgs/logo.png" alt="Logo The Hat Below">
+        </a>
+    </div>
+    <button class="hamburguer" id="hamburguer">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <nav class="header-nav" id="header-nav">
+        <a class="button-nav" href="#sobre">Sobre</a>
+        <a class="button-nav" href="#galeria">Galeria</a>
+        <a class="button-nav" href="#contato">Contato</a>
+        <a class="button-nav" href="jogar.html">Jogar</a>
+    </nav>
+</header>
 
     <main>
         <section id="hero">
@@ -90,6 +94,21 @@
             <a href="https://www.linkedin.com/in/francesco-gris-053092355/" target="_blank">LinkedIn</a>
         </nav>
     </footer>
+
+    <script>
+    const hamburguer = document.getElementById('hamburguer');
+    const nav = document.getElementById('header-nav');
+
+    hamburguer.addEventListener('click', function() {
+        nav.classList.toggle('aberto');
+    });
+
+    document.querySelectorAll('.button-nav').forEach(link => {
+        link.addEventListener('click', function() {
+            nav.classList.remove('aberto');
+        });
+    });
+</script>
 </body>
 
 </html>
