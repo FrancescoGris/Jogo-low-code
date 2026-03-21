@@ -68,12 +68,14 @@
 
         <section id="contato">
             <h2 class="titulo-secao">Contato</h2>
-            <form id="form">
-                <input type="text" id="nome" placeholder="Seu nome">
-                <input type="email" id="email" placeholder="Seu e-mail">
-                <input type="tel" id="telefone" placeholder="Seu telefone">
-                <button type="button" id="botao">Enviar</button>
-            </form>
+            <form action="https://api.web3forms.com/submit" method="POST" id="form">
+    <input type="hidden" name="access_key" value="b51a3ecd-03e2-4097-8e1a-c51d6c36ca8a">
+    <input type="text" name="nome" id="nome" placeholder="Seu nome">
+    <input type="email" name="email" id="email" placeholder="Seu e-mail">
+    <input type="tel" name="telefone" id="telefone" placeholder="Seu telefone">
+    <input type="msg" name="mensagem" id="mensagem" placeholder="Sua mensagem">
+    <button type="submit" id="botao">Enviar</button>
+</form>
         </section>
 
 
